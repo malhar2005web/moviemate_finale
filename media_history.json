@@ -1,0 +1,251 @@
+{
+    "movies": {
+        "Sairat": {
+            "title": "Sairat",
+            "year": "2016",
+            "rating": 7.5,
+            "genres": [
+                "Drama",
+                "Romance"
+            ],
+            "actors": [
+                "Rinku Rajguru",
+                "Akash Thosar",
+                "Tanaji Galgunde",
+                "Anuja Mule",
+                "Suraj Pawar"
+            ],
+            "director": "Nagraj Popatrao Manjule",
+            "recommendations": [
+                {
+                    "title": "Aashiqui 2",
+                    "year": "2013",
+                    "rating": 6.8,
+                    "overview": "A young woman meets a failing musician who launches her singing career, but their relationship is doomed when people assume he's with her for her fame and fortune.",
+                    "genres": [
+                        "Drama",
+                        "Romance"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Sui Dhaaga - Made in India",
+                    "year": "2018",
+                    "rating": 7.0,
+                    "overview": "Mauji stays in a village near Delhi with his wife Mamta, father and mother. Varun works at a shop that sells sewing machines, owned by Bansal and his son Prashant. Both have a habit of ill-treating Mauji and make him do fun antics. When Prashant gets married, Bansal invites Mauji and his entire family. Mamta feels humiliated when she sees Mauji being asked to imitate a dog by the Bansals.",
+                    "genres": [
+                        "Comedy",
+                        "Drama",
+                        "Family"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Gold",
+                    "year": "2018",
+                    "rating": 7.051,
+                    "overview": "Set in 1948, the historic story of India's first Olympic medal post their independence.",
+                    "genres": [
+                        "Drama",
+                        "History"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Newton",
+                    "year": "2017",
+                    "rating": 7.1,
+                    "overview": "A government clerk on election duty in a conflict-ridden jungle of Central India tries his best to conduct free and fair voting despite the apathy of security forces and the looming fear of guerrilla attacks by communist rebels.",
+                    "genres": [
+                        "Comedy",
+                        "Drama"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Bhavesh Joshi Superhero",
+                    "year": "2018",
+                    "rating": 7.444,
+                    "overview": "A young man who stands for the right discovers that he's destined to do bigger things, which will transform him from a common man into a Superhero.",
+                    "genres": [
+                        "Action",
+                        "Drama"
+                    ],
+                    "type": "movie"
+                }
+            ],
+            "type": "movie"
+        },
+        "Dangal": {
+            "title": "Dangal",
+            "year": "2016",
+            "rating": 7.887,
+            "genres": [
+                "Drama",
+                "Family",
+                "Comedy"
+            ],
+            "actors": [
+                "Aamir Khan",
+                "Fatima Sana Shaikh",
+                "Sanya Malhotra",
+                "Zaira Wasim",
+                "Suhani Bhatnagar"
+            ],
+            "director": "Nitesh Tiwari",
+            "recommendations": [
+                {
+                    "title": "Secret Superstar",
+                    "year": "2017",
+                    "rating": 7.266,
+                    "overview": "A talented teenage singer-songwriter living amid domestic abuse becomes a YouTube sensation after a video in which she hides her identity goes viral.",
+                    "genres": [
+                        "Drama",
+                        "Music"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Lagaan: Once Upon a Time in India",
+                    "year": "2001",
+                    "rating": 7.253,
+                    "overview": "In 1890s India, an arrogant British commander challenges the harshly taxed residents of Champaner to a high-stakes cricket match.",
+                    "genres": [
+                        "Adventure",
+                        "Drama",
+                        "History"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "PK",
+                    "year": "2014",
+                    "rating": 7.709,
+                    "overview": "A stranger in the city asks questions no one has asked before. Known only by his initials, the man's innocent questions and childlike curiosity take him on a journey of love, laughter and letting go.",
+                    "genres": [
+                        "Comedy",
+                        "Drama",
+                        "Science Fiction"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Dishoom",
+                    "year": "2016",
+                    "rating": 5.4,
+                    "overview": "When India's top cricketer is kidnapped in the Middle East, a loose cannon and a rookie cop are tasked with finding him before the high-stakes match with Pakistan.",
+                    "genres": [
+                        "Comedy",
+                        "Action"
+                    ],
+                    "type": "movie"
+                },
+                {
+                    "title": "Dhoom 3",
+                    "year": "2013",
+                    "rating": 6.044,
+                    "overview": "To avenge his father's death, a circus entertainer trained in magic and acrobatics robs banks to take down a corrupt bank owner. Two cops from Mumbai are assigned to the case.",
+                    "genres": [
+                        "Action",
+                        "Crime"
+                    ],
+                    "type": "movie"
+                }
+            ],
+            "type": "movie"
+        }
+    },
+    "tv_shows": {},
+    "watch_history": [
+        "Sairat",
+        "Dangal"
+    ],
+    "preferences": {
+        "movie_genres": {
+            "Drama": 2,
+            "Romance": 1,
+            "Family": 1,
+            "Comedy": 1
+        },
+        "tv_genres": {},
+        "actors": {
+            "Rinku Rajguru": 1,
+            "Akash Thosar": 1,
+            "Tanaji Galgunde": 1,
+            "Anuja Mule": 1,
+            "Suraj Pawar": 1,
+            "Aamir Khan": 1,
+            "Fatima Sana Shaikh": 1,
+            "Sanya Malhotra": 1,
+            "Zaira Wasim": 1,
+            "Suhani Bhatnagar": 1
+        },
+        "directors": {
+            "Nagraj Popatrao Manjule": 1,
+            "Nitesh Tiwari": 1
+        }
+    },
+    "genre_cache": {
+        "movie_28": "Action",
+        "movie_12": "Adventure",
+        "movie_16": "Animation",
+        "movie_35": "Comedy",
+        "movie_80": "Crime",
+        "movie_99": "Documentary",
+        "movie_18": "Drama",
+        "movie_10751": "Family",
+        "movie_14": "Fantasy",
+        "movie_36": "History",
+        "movie_27": "Horror",
+        "movie_10402": "Music",
+        "movie_9648": "Mystery",
+        "movie_10749": "Romance",
+        "movie_878": "Science Fiction",
+        "movie_10770": "TV Movie",
+        "movie_53": "Thriller",
+        "movie_10752": "War",
+        "movie_37": "Western",
+        "tv_10759": "Action & Adventure",
+        "tv_16": "Animation",
+        "tv_35": "Comedy",
+        "tv_80": "Crime",
+        "tv_99": "Documentary",
+        "tv_18": "Drama",
+        "tv_10751": "Family",
+        "tv_10762": "Kids",
+        "tv_9648": "Mystery",
+        "tv_10763": "News",
+        "tv_10764": "Reality",
+        "tv_10765": "Sci-Fi & Fantasy",
+        "tv_10766": "Soap",
+        "tv_10767": "Talk",
+        "tv_10768": "War & Politics",
+        "tv_37": "Western"
+    },
+    "movie_features": {
+        "Sairat": {
+            "popularity": 3.9886,
+            "vote_average": 7.5,
+            "vote_count": 64,
+            "genres": [
+                18,
+                10749
+            ],
+            "year": 2016
+        },
+        "Dangal": {
+            "popularity": 6.145,
+            "vote_average": 7.887,
+            "vote_count": 1035,
+            "genres": [
+                18,
+                10751,
+                35
+            ],
+            "year": 2016
+        }
+    },
+    "tv_features": {},
+    "association_rules": [],
+    "updated_at": "2025-05-23T06:05:36.283217+00:00"
+}
