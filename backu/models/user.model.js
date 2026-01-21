@@ -27,5 +27,10 @@ const userSchema=mongoose.Schema({
         type:Array,
         default:[],
     },
+    autoAcceptFriends: {
+  type: Boolean,
+  default: false,
+},
+
 })
 export const User=mongoose.model('User',userSchema);//users

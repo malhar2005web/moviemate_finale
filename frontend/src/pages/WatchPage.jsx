@@ -31,6 +31,10 @@ const WatchPage = () => {
   const [loading, setLoading] = useState(true);
   const [showProviders, setShowProviders] = useState(false);
 
+  // 👁 Seen state
+  const [isWatched, setIsWatched] = useState(false);
+  const [markingSeen, setMarkingSeen] = useState(false);
+
   const sliderRef = useRef(null);
   const hasLoggedRef = useRef(false);
 
@@ -104,6 +108,24 @@ const WatchPage = () => {
     });
   }, [content, contentType]);
 
+  /* 👁 MARK AS SEEN */
+  const markAsSeen = async () => {
+    if (!content || isWatched || markingSeen) return;
+
+    try {
+      setMarkingSeen(true);
+      await axios.post("/api/v1/social/watched", {
+        contentId: content.id,
+        contentType,
+      });
+      setIsWatched(true);
+    } catch {
+      alert("Login required to mark as seen");
+    } finally {
+      setMarkingSeen(false);
+    }
+  };
+
   const avgUserRating =
     userReviews.length > 0
       ? (
@@ -163,8 +185,20 @@ const WatchPage = () => {
           )}
         </div>
 
-        {/* 🔥 OTT */}
-        <div className="flex justify-center mb-12">
+        {/* 👁 SEEN + OTT */}
+        <div className="flex justify-center gap-4 mb-12">
+          <button
+            onClick={markAsSeen}
+            disabled={isWatched || markingSeen}
+            className={`px-6 py-3 rounded-xl font-semibold text-lg transition ${
+              isWatched
+                ? "bg-green-700 cursor-not-allowed"
+                : "bg-green-600 hover:bg-green-700"
+            }`}
+          >
+            {isWatched ? "👁 Seen" : markingSeen ? "Marking..." : "👁 Mark as Seen"}
+          </button>
+
           <button
             onClick={() => setShowProviders(true)}
             className="px-8 py-3 bg-red-600 rounded-xl font-semibold text-lg"
@@ -276,7 +310,7 @@ const WatchPage = () => {
           ))}
         </div>
 
-        {/* 🔁 SIMILAR — BIG HERO SECTION */}
+        {/* 🔁 SIMILAR */}
         {similarContent.length > 0 && (
           <div className="max-w-7xl mx-auto mb-36 relative">
             <h3 className="text-4xl font-bold mb-10">
@@ -320,7 +354,7 @@ const WatchPage = () => {
           </div>
         )}
 
-        {/* 🗂️ TMDB REVIEWS — LAST */}
+        {/* 🗂️ TMDB REVIEWS */}
         {tmdbReviews.length > 0 && (
           <div className="max-w-4xl mx-auto mb-24">
             <h3 className="text-2xl font-semibold mb-4">

@@ -4,6 +4,8 @@ import { LogOut, Menu, Search, Bookmark } from "lucide-react";
 import { useAuthStore } from "../store/authUser";
 import { useContentStore } from "../store/content";
 import FlickskyButton from "./FlickskyButton";
+import { Users } from "lucide-react";
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -58,6 +60,21 @@ const Navbar = () => {
           <Link to="/watchparty" className="hover:underline">
             Watch Party
           </Link>
+          <Link
+  to="/seen"
+  className="hover:underline flex items-center gap-1"
+>
+  👁 Seen
+</Link>
+      <Link
+  to="/friends"
+  className="hover:underline flex items-center gap-1"
+>
+  <Users size={16} />
+  Friends
+</Link>
+
+
         </div>
       </div>
 
@@ -129,6 +146,23 @@ const Navbar = () => {
           >
             Watch Party
           </Link>
+          <Link
+  to="/seen"
+  className="block hover:underline p-2"
+  onClick={toggleMobileMenu}
+>
+  👁 Seen
+</Link>
+<Link
+  to="/friends"
+  className="block hover:underline p-2 flex items-center gap-2"
+  onClick={toggleMobileMenu}
+>
+  <Users size={16} />
+  Friends
+</Link>
+
+
         </div>
       )}
     </header>

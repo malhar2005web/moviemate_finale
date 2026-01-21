@@ -14,7 +14,9 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import flickskyRoutes from "./routes/flicksky.route.js";
 import activityRoutes from "./routes/activity.route.js";
-
+import socialActivityRoutes from "./routes/socialActivity.route.js";
+import friendsRoutes from "./routes/friends.route.js";
+import userRoutes from "./routes/user.route.js";
 
 
 
@@ -34,7 +36,9 @@ app.use("/api/v1/search",protectRoute,searchRoutes)
 app.use("/api/v1/watchlist",protectRoute,watchlistRoutes)
 app.use("/api/flicksky", flickskyRoutes);
 app.use("/api/v1/activity",activityRoutes);
-
+app.use("/api/v1/social", socialActivityRoutes);
+app.use("/api/v1/friends", friendsRoutes);
+app.use("/api/v1/user", userRoutes);
 
             
 // --- Socket.IO setup requires HTTP server ---

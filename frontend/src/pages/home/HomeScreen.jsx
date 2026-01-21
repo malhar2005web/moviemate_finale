@@ -30,6 +30,9 @@ const HomeScreen = () => {
   // 🔥 NEW: BASED ON ACTIVITY
   const [basedOnActivity, setBasedOnActivity] = useState([]);
 
+  // 🆕🔥 NEW: FRIENDS FEED (WATCHED + WATCHLIST)
+  const [friendsFeed, setFriendsFeed] = useState([]);
+
   /* FETCH SIMILAR FROM WATCHLIST */
   useEffect(() => {
     if (!watchlist || watchlist.length === 0) {
@@ -72,6 +75,14 @@ const HomeScreen = () => {
       .get("/api/v1/activity/basedOnActivity")
       .then((res) => setBasedOnActivity(res.data.content || []))
       .catch(() => setBasedOnActivity([]));
+  }, []);
+
+  /* 🆕🔥 FETCH FRIENDS FEED */
+  useEffect(() => {
+    axios
+      .get("/api/v1/social/friends-feed")
+      .then((res) => setFriendsFeed(res.data.feed || []))
+      .catch(() => setFriendsFeed([]));
   }, []);
 
   /* FETCH INDIAN CONTENT */
@@ -164,6 +175,11 @@ const HomeScreen = () => {
         />
       )}
 
+      {/* 🆕🔥 FRIENDS ARE WATCHING */}
+      {friendsFeed.length > 0 && (
+        <MovieSlider categories="Friends Are Watching" items={friendsFeed} />
+      )}
+
       {/* SIMILAR TO WATCHLIST */}
       {similarFromWatchlist.length > 0 && (
         <MovieSlider
@@ -174,10 +190,7 @@ const HomeScreen = () => {
 
       {/* INDIAN SECTIONS */}
       {indianTrending.length > 0 && (
-        <MovieSlider
-          categories="Trending in India"
-          items={indianTrending}
-        />
+        <MovieSlider categories="Trending in India" items={indianTrending} />
       )}
 
       {indianTopRated.length > 0 && (
@@ -225,18 +238,14 @@ const HomeScreen = () => {
                         <Bookmark
                           size={18}
                           className={
-                            saved
-                              ? "fill-white text-white"
-                              : "text-white"
+                            saved ? "fill-white text-white" : "text-white"
                           }
                         />
                       </button>
 
                       <Link to={`/watch/${item.id}`}>
                         <img
-                          src={
-                            ORIGINAL_IMG_BASE_URL + item.poster_path
-                          }
+                          src={ORIGINAL_IMG_BASE_URL + item.poster_path}
                           alt={item.title || item.name}
                           className="w-full h-[240px] object-cover rounded-lg"
                         />
