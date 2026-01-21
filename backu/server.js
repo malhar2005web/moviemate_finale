@@ -13,6 +13,7 @@ import { protectRoute } from './middleware/protectRoute.js';
 import { createServer } from "http";
 import { Server } from "socket.io";
 import flickskyRoutes from "./routes/flicksky.route.js";
+import activityRoutes from "./routes/activity.route.js";
 
 
 
@@ -30,8 +31,9 @@ app.use("/api/v1/auth",authRoutes)
 app.use("/api/v1/movie",protectRoute,movieRoutes)
 app.use("/api/v1/tv",protectRoute,tvRoutes)
 app.use("/api/v1/search",protectRoute,searchRoutes)
-app.use("/api/v1",protectRoute,watchlistRoutes)
+app.use("/api/v1/watchlist",protectRoute,watchlistRoutes)
 app.use("/api/flicksky", flickskyRoutes);
+app.use("/api/v1/activity",activityRoutes);
 
 
             

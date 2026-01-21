@@ -4,6 +4,8 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import WatchPage from "./pages/WatchPage";
 import WatchParty from "./components/WatchParty";
+import WatchlistPage from "./pages/WatchlistPage";
+
 
 
 import { Toaster } from "react-hot-toast";
@@ -36,13 +38,17 @@ function App() {
 		<>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
-				<Route path='/watchProvider' element={<WatchProvider />} />
+				
 				<Route path="/watchparty" element={<WatchParty />} />
 				<Route path='/login' element={!user ? <LoginPage /> : <Navigate to={"/"} />} />
 				<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to={"/"} />} />
 				<Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={"/login"} />} />
 				<Route path='/search' element={user ? <SearchPage /> : <Navigate to={"/login"} />} />
 				<Route path='/history' element={user ? <SearchHistoryPage /> : <Navigate to={"/login"} />} />
+				<Route
+  path="/watchlist"
+  element={user ? <WatchlistPage /> : <Navigate to={"/login"} />}
+/>
 				<Route path='/*' element={<NotFoundPage />} />
 			</Routes>
 			
