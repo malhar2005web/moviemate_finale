@@ -4,7 +4,9 @@
   "main": "backu/server.js",
   "scripts": {
   
-  "build": "npm run build --prefix frontend",
+
+   "build": "cd frontend && npm install && npx vite build",
+
   "start": "node backu/server.js"
 }
 ,
