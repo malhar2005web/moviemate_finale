@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "backu/server.js",
   "scripts": {
-  "install": "npm install --prefix frontend",
+  
   "build": "npm run build --prefix frontend",
   "start": "node backu/server.js"
 }
